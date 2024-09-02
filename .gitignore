@@ -1,0 +1,8 @@
+env.dev
+env.prod
+node_modules
+dist
+package-lock.json
+.env
+.env.dev
+.env.prod
