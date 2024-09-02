@@ -23,7 +23,7 @@ class ServerNode {
     }
 
     initState() {
-        this.dbMongoConnection();
+      
         this.middlewares()
         this.server = http.createServer(this.app);
       
@@ -32,15 +32,7 @@ class ServerNode {
 
     }
 
-    async dbMongoConnection() {
-        const uri = `${process.env.DB_CONNECTION_STRING}`;
-        try {
-            await mongoose.connect(uri);
-            console.log("Database connection was successfully");
-        } catch (error) {
-            throw new Error(`Something wrongs: ${error}`);
-        }
-    }
+
 
     middlewares() {
         // this.app.use(morgan('dev'))
